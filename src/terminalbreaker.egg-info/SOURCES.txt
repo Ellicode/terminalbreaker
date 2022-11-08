@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/terminalbreaker.egg-info/PKG-INFO
+src/terminalbreaker.egg-info/SOURCES.txt
+src/terminalbreaker.egg-info/dependency_links.txt
+src/terminalbreaker.egg-info/requires.txt
+src/terminalbreaker.egg-info/top_level.txt
