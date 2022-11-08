@@ -1,13 +1,13 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 [project]
 name = "terminalbreaker"
 version = "0.0.1"
 authors = [
   { name="Ellicode", email="hello@ellicode.com" },
 ]
-description = "***BREAK THE TERMINAL!*** Create panels, forms, dialogs and buttons into your Python CLI app! "
+description = "BREAK THE TERMINAL! Create panels, forms, dialogs and buttons into your Python CLI app! "
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
