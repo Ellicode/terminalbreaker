@@ -1,31 +1,14 @@
 Metadata-Version: 2.1
 Name: terminalbreaker
-Version: 0.0.1
-Summary: BREAK THE TERMINAL! Create panels, forms, dialogs and buttons into your Python CLI app! 
+Version: 0.0.2
+Summary: UNKNOWN
 Home-page: https://github.com/gmyrianthous/example-publish-pypi
 Author: Ellicode
-Author-email: Ellicode <hello@ellicode.com>
+Author-email: hello@ellicode.com
 License: MIT
-Project-URL: Homepage, https://github.com/Ellicode/terminalbreaker/blob/main/README.md
-Project-URL: Bug Tracker, https://github.com/Ellicode/terminalbreaker/issues
 Keywords: example project
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: OS Independent
-Requires-Python: >=3.7
-Description-Content-Type: text/markdown
+Platform: UNKNOWN
 License-File: LICENSE
 
-# terminalbreaker
+UNKNOWN
 
-***BREAK THE TERMINAL!***
-
-Create panels, forms, dialogs and buttons into your Python CLI app! 
-
-Install this package with : 
-```s
-pip install terminalbreaker
-```
-https://pypi.org/project/terminalbreaker/
-
-This python library is on beta and i'm working hard to complete it. Here is my website if you want to learn more (it's in french).

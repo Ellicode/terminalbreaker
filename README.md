@@ -6,7 +6,7 @@ Create panels, forms, dialogs and buttons into your Python CLI app!
 
 Install this package with : 
 ```s
-pip install -i https://test.pypi.org/simple/ terminalbreaker==0.0.1
+pip install terminalbreaker
 ```
 https://pypi.org/project/terminalbreaker/
 

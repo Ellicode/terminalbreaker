@@ -1,4 +1,1 @@
-colorama
-os
-sys
-keyboard
+colorama==0.4.6
