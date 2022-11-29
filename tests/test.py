@@ -1,2 +1,3 @@
-import terminalbreaker
-window = terminalbreaker.Window("Title of the window", ["Hello, world!"])
+from terminalbreaker import window
+win = window.Window("Title of the window", ["Hello, world!"])
+win.mainloop()

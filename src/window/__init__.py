@@ -1,7 +1,6 @@
 from colorama import Fore, Back, Style
 import colorama
 import os
-import sys
 import keyboard
 
 def clear():
