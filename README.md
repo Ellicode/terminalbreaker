@@ -2,12 +2,15 @@
 
 ***BREAK THE TERMINAL!***
 
+[Documentation](docs/README.md)
+
 Create panels, forms, dialogs and buttons into your Python CLI app! 
 
 Install this package with : 
 ```s
-pip install terminalbreaker==0.0.2
+pip install terminalbreaker_pkg
 ```
 https://pypi.org/project/terminalbreaker/
 
-This python library is on beta and i'm working hard to complete it. Here is my website if you want to learn more (it's in french).
+This python library is on beta and i'm working hard to complete it. 🤝
+
