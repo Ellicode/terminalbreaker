@@ -1,3 +1,3 @@
 # Terminalbreaker
 
-Docs are coming!
+- [Getting started](getting-started.md)
