@@ -1,16 +1,8 @@
+<div align="center">
+![image](https://user-images.githubusercontent.com/76738069/204636618-c4336079-a9b9-477f-9f7c-6c07a0551dba.png)
+
 # terminalbreaker
 
-***BREAK THE TERMINAL!***
+[Documentation](https://github.com/Ellicode/terminalbreaker/wiki)
 
-[Documentation](docs/README.md)
-
-Create panels, forms, dialogs and buttons into your Python CLI app! 
-
-Install this package with : 
-```s
-pip install terminalbreaker_pkg
-```
-https://pypi.org/project/terminalbreaker/
-
-This python library is on beta and i'm working hard to complete it. 🤝
-
+</div>
