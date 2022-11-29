@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='terminalbreaker_py',
-    version='0.2.0',
+    version='0.2.1',
     license='MIT',
     author="Ellicode",
     author_email='ellicode22@gmail.com',
