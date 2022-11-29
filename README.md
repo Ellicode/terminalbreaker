@@ -2,7 +2,7 @@
 
 ***BREAK THE TERMINAL!***
 
-[Documentation](docs/README.md)
+[Documentation](https://github.com/Ellicode/terminalbreaker/wiki)
 
 Create panels, forms, dialogs and buttons into your Python CLI app! 
 
