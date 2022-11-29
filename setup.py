@@ -3,11 +3,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='terminalbreaker',
-    version='0.1.2',
+    version='0.1.3',
     license='MIT',
     author="Ellicode",
-    author_email='hello@ellicode.com',
-    packages=find_packages('src'),
+    author_email='ellicode22@gmail.com',
+    packages=["terminalbreaker"],
     package_dir={'': 'src'},
     description="BREAK THE TERMINAL! Create panels, forms, dialogs and buttons into your Python CLI app!",
     url='https://github.com/Ellicode/terminalbreaker/blob/main/README.md',
