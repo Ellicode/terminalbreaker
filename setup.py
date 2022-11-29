@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='terminalbreaker_pkg',
+    name='terminalbreaker_py',
     version='0.1.8',
     license='MIT',
     author="Ellicode",
