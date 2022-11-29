@@ -7,7 +7,7 @@ setup(
     license='MIT',
     author="Ellicode",
     author_email='ellicode22@gmail.com',
-    packages=["terminalbreaker"],
+    packages=find_packages('src'),
     package_dir={'': 'src'},
     description="BREAK THE TERMINAL! Create panels, forms, dialogs and buttons into your Python CLI app!",
     url='https://github.com/Ellicode/terminalbreaker/blob/main/README.md',
