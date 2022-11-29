@@ -11,7 +11,7 @@ def init():
     clear()
 
 class Window():
-    def __init__(self,name=str("Title of the window"),lines=list(["Hello, world!"]),padx=int(50),pady=int(5), width=int(40),fields=list(),buttons=list()):
+    def __init__(self,name=str("Title of the window"),lines=list(["Hello, world!"]),padx=int(50),pady=int(5), width=int(40),fields=list(),buttons=list(Button)):
         # ┌┐└┘├┤─│ 40
         self.destroyed = False
         self.buttons = buttons
