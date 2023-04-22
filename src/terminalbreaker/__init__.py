@@ -11,7 +11,7 @@ def init():
     clear()
 
 class Window():
-    def __init__(self,name=str("Title of the window"),lines=list(["Hello, world!"]),padx=int(50),pady=int(5), width=int(40),fields=list(),buttons=list()):
+    def __init__(self,name=str("Title of the window"),text="Hello, world!",padx=int(50),pady=int(5), width=int(40),fields=list(),buttons=list()):
         # ┌┐└┘├┤─│ 40
         self.destroyed = False
         self.buttons = buttons
@@ -27,19 +27,19 @@ class Window():
         self.text += " " * self.padx + "├"+ ("─" * self.width) + "┤\n"
 
         if self.fields:
-            for i in lines:
+            for i in text.split("\n"):
                 if len(str(i)) >= (self.width - 1):
                     raise ValueError("To much text! Text must be less than {}".format(self.width))
                 else:
                     self.text += " " * self.padx + "│ " + str(i) + " " * ((self.width - 1) - len(str(i))) + "│\n"
             self.text += " " * self.padx + "├"+ ("─" * self.width) + "┤"
         else:
-            for i in lines[:-1]:
+            for i in text.split("\n")[:-1]:
                 if len(str(i)) >= (self.width - 1):
                     raise ValueError("To much text! Text must be less than {}".format(self.width))
                 else:
                     self.text += " " * self.padx + "│ " + str(i) + " " * ((self.width - 1) - len(str(i))) + "│\n"
-            self.text += " " * self.padx + "│ " + str(lines[-1]) + " " * ((self.width - 1) - len(str(lines[-1]))) + "│"
+            self.text += " " * self.padx + "│ " + str(text.split("\n")[-1]) + " " * ((self.width - 1) - len(str(text.split("\n")[-1]))) + "│"
 
 
         self.end = ""
