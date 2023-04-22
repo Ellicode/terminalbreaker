@@ -1,4 +1,4 @@
-from terminalbreaker import Window, clear
+from terminalbreaker import *
 
 clear()
 win = Window(

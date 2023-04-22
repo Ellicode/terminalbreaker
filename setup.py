@@ -14,6 +14,5 @@ setup(
     keywords='example project',
     install_requires=[
           'colorama==0.4.6',
-      ],
-
+    ],
 )
