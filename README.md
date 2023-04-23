@@ -1,6 +1,6 @@
 <div align="center">
   
-![image](screenshot.png)
+![image](screenrecord.mp4)
 
 ## `pip install terminalbreaker-python`
 
