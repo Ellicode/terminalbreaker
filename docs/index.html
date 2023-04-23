@@ -10,37 +10,54 @@
     <script>hljs.highlightAll();</script>
     <title>Document</title>
 </head>
-<body>
-    <div class="markdown-body container-md py-5">
-        <a href="../index.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
-            Home
-        </a>
-         &nbsp; 
-        <a href="api.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
-            API documentation
-        </a>
-        <h1>Documentation</h1>
+<body class="clearfix p-5">
+    <div class="col-lg-3 float-left col-md-12 markdown-body p-5 position-md-sticky top-0 left-0">
+        <ul>
+            <li><a class="Link--secondary" href="../index.html">Home</a></li>
+
+            <li><a class="Link--primary text-bold" aria-current="page" href="index.html">Introduction</a></li>
+            <ul>
+                <li><a class="Link--secondary" href="#installation">Installation</a></li>
+                <li><a class="Link--secondary" href="#basic-usage">Basic usage</a></li>
+            </ul>
+            <li><a class="Link--secondary" href="api.html">API documentation</a></li>
+            <ul>
+                <li><a class="Link--secondary" href="api.html#Window">Window</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="markdown-body container-md float-left py-5 col-lg-9 col-md-12">
+        <h1>Introduction</h1>
         <p>TerminalBreraker is a python module to create better guis, forms and more in the terminal.</p>
-        <h2>Installation</h2>
+        <h2 id="installation">Installation</h2>
         <p>You can install TerminalBreraker with pip install by running the command below :</p>
         <pre><code class="language-shell">$ pip install terminalbreaker-python</code></pre>
         <p>You can also download the source by clicking the button below :</p>
         <a class="btn btn-outline" href="../dist/terminalbreaker_py-0.2.1.tar.gz" role="button">terminalbreaker_py-0.2.1.tar.gz</a>
-        <h2>Basic usage</h2>
+        <h2 id="basic-usage">Basic usage</h2>
         <p>Just call the <a href="api.html#Window" class="branch-name">Window</a> class to your code and you will have a basic window appearing in your terminal!</p>
         <pre><code class="language-python">from terminalbreaker import * # Importing all modules 
-
 win = Window("Title of the window", "Hello, world!")
 win.mainloop() # Don't forget this!</code></pre>
-        <figure>
-            <img src="../screenshot.png" class="rounded" alt="Screenshot">
-            <figcaption>The result of the code below</figcaption>
-        </figure>
-        <div class="flash">
-            <!-- <%= octicon "info" %> -->
-            <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-            Don't forget to add <code>.mainloop()</code> to the window to bind keyboard.
+            <figure>
+                <img src="../screenshot.png" class="rounded" alt="Screenshot">
+                <figcaption>The result of the code below</figcaption>
+            </figure>
+            <div class="flash">
+                <!-- <%= octicon "info" %> -->
+                <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+                Don't forget to add <code>.mainloop()</code> to the window to bind keyboard.
+            </div>
+            <h2>What's next?</h2>
+            <a href="api.html" class="link-mktg arrow-target-mktg link-emphasis-mktg text-semibold f4-mktg">
+                API documentation
+            
+                <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
+                    <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+            </a>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+    </html>

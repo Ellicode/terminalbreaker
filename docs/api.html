@@ -10,15 +10,22 @@
     <script>hljs.highlightAll();</script>
     <title>Document</title>
 </head>
-<body>
-    <div class="markdown-body container-md py-5">
-        <a href="../index.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
-            Home
-        </a>
-        &nbsp; 
-        <a href="index.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
-            Introduction
-        </a>
+<body class="clearfix p-5">
+    <div class="col-lg-3 float-left col-md-12 markdown-body p-5 position-sticky top-0 left-0">
+        <ul>
+            <li><a class="Link--secondary" href="../index.html">Home</a></li>
+            <li><a class="Link--secondary" aria-current="page" href="index.html">Introduction</a></li>
+            <ul>
+                <li><a class="Link--secondary" href="index.html#installation">Installation</a></li>
+                <li><a class="Link--secondary" href="index.html#basic-usage">Basic usage</a></li>
+            </ul>
+            <li><a class="Link--primary text-bold" href="api.html">API documentation</a></li>
+            <ul>
+                <li><a class="Link--secondary" href="#Window">Window</a></li>
+            </ul>
+        </ul>
+    </div>
+    <div class="markdown-body container-md float-left py-5 col-lg-9 col-md-12">
         <h1>API Documentation</h1>
         <h2 id="Window">Window</h2>
         <pre><code class="language-python">class Window(
