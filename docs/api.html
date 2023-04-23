@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="markdown-body container-md py-5">
+        <a href="../index.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
+            Home
+        </a>
+        &nbsp; 
+        <a href="index.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
+            Introduction
+        </a>
+        <h1>API Documentation</h1>
+        <h2 id="Window">Window</h2>
+        <pre><code class="language-python">class Window(
+    name : str = "Title of the window",
+    text : str = "Hello, world!",
+    width : int = 40, 
+    fields : list = None,
+    buttons : list = [{"text":"OK", "type": "button"}, {"text":"Cancel", "type": "button"}],
+    inputvalues: dict = {}
+    tabindex : int = 0,
+)</code></pre>
+        <p><b>💡 Usage :</b></p>
+        <pre><code class="language-python">win = Window(name="A window",text="Hello!") # Some config
+win.mainloop() # Start the loop</code></pre>
+        <ul>
+            <li>Keyword argumets <br>
+                <ul>
+                    <li>
+                        <p><code>name</code> ( <b>String</b> )</p>
+                        <p>Sets the window name and the title. Default is <em>Title of the window</em>.</p>
+                    </li>
+                    <li>
+                        <p><code>text</code> ( <b>String</b> )</p>
+                        <p>The window's content, divided by new lines. Default is <em>Hello, world!</em>.</p>
+                    </li>
+                    <li>
+                        <p><code>width</code> ( <b>Integer</b> )</p>
+                        <p>The window's width in columns. The default width is <em>40</em>.</p>
+                    </li>
+                    <li>
+                        <p><code>fields</code> ( <b>List</b> )</p>
+                        <p>Put <a href="#url" class="branch-name">Field</a>s in this list.</p>
+                    </li>
+                    <li>
+                        <p><code>buttons</code> ( <b>List</b> )</p>
+                        <p>Put <a href="#url" class="branch-name">Button</a>s in this list. Defaults are <em>OK</em> and <em>Cancel</em></p>
+                    </li>
+                    <li style="opacity:0.5">
+                        <p><code>inputvalues</code> ( <b>Dictionnary</b> )</p>
+                        <p>Sets the default field values (used by system)</p>
+                    </li>
+                    <li style="opacity:0.5">
+                        <p><code>tabindex</code> ( <b>Integer</b> )</p>
+                        <p>Sets the default tab index (used by system)</p>
+                    </li>
+                </ul>
+            </li>
+            <li>Methods <br>
+                <ul>
+                    <li>
+                        <p><code>destroy()</code></p>
+                        <p>Destroys the window, by removing all keybindings.</p>
+                    </li>
+                    <li>
+                        <p><code>mainloop()</code></p>
+                        <p>Starts the window's main loop, that activates keybinds.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>Variables <br>
+                <ul>
+                    <li>
+                        <p><code>inputvalues</code> ( <b>Dictionnary</b> )</p>
+                        <p>Get the input's value by querying by their name.</p>
+                        <p><b>💡 Example :</b></p>
+                        <pre><code class="language-python">>>> win = Window(fields={"name":"field", "type":"field"} ...)
+>>> win.mainloop() # Start the loop
+>>> print(win.inputvalues) 
+{"field":""}</code></pre>
+                    </li>
+                </ul>
+            </li>
+            <li>Errors <br>
+                <ul>
+                    <li>
+                        <p><code>ValueError: To much text! Text must be less than X characters (line X)</code></p>
+                        <p>You get this error when the lengh a line of your text is bigger than the window's width.</p>
+                        <p><b>💡 Example :</b></p>
+                        <pre><code class="language-python">>>> win = Window(text="Loooooooooooooong text",width=10) # 17 > 10
+>>> win.mainloop() # Start the loop
+ValueError: To much text! Text must be less than 10 characters (line 1)</code></pre>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

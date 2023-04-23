@@ -4,15 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <title>Document</title>
 </head>
 <body>
-    <img src="../screenshot.gif" alt="screenshot">
-    <p>TerminalBreraker is a python module to create better guis, forms and more.</p>
-    <h2>Installation</h2>
-    <p>You can install TerminalBreraker by running the command below:</p>
-    <pre>
-        $ <code>pip install terminalbreaker-python</code>
-    </pre>
+    <div class="markdown-body container-md py-5">
+        <a href="../index.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
+            Home
+        </a>
+         &nbsp; 
+        <a href="api.html" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
+            API documentation
+        </a>
+        <h1>Documentation</h1>
+        <p>TerminalBreraker is a python module to create better guis, forms and more in the terminal.</p>
+        <h2>Installation</h2>
+        <p>You can install TerminalBreraker with pip install by running the command below :</p>
+        <pre><code class="language-shell">$ pip install terminalbreaker-python</code></pre>
+        <p>You can also download the source by clicking the button below :</p>
+        <a class="btn btn-outline" href="../dist/terminalbreaker_py-0.2.1.tar.gz" role="button">terminalbreaker_py-0.2.1.tar.gz</a>
+        <h2>Basic usage</h2>
+        <p>Just call the <a href="api.html#Window" class="branch-name">Window</a> class to your code and you will have a basic window appearing in your terminal!</p>
+        <pre><code class="language-python">from terminalbreaker import * # Importing all modules 
+
+win = Window("Title of the window", "Hello, world!")
+win.mainloop() # Don't forget this!</code></pre>
+        <figure>
+            <img src="../screenshot.png" class="rounded" alt="Screenshot">
+            <figcaption>The result of the code below</figcaption>
+        </figure>
+        <div class="flash">
+            <!-- <%= octicon "info" %> -->
+            <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+            Don't forget to add <code>.mainloop()</code> to the window to bind keyboard.
+        </div>
+    </div>
 </body>
 </html>

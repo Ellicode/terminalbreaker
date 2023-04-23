@@ -14,17 +14,17 @@ def clear():
 def init():
     colorama.init()
     clear()
-def delete_last_line():
-    "Use this function to delete the last line in the STDOUT"
-
-    #cursor up one line
-    sys.stdout.write('\x1b[1A')
-
-    #delete last line
-    sys.stdout.write('\x1b[2K')
 init()
 class Window():
-    def __init__(self,name=str("Title of the window"),text="Hello, world!", width : int = 40, fields: list = None,tabindex: int = 0, buttons: list = [{"text":"OK"}, {"text":"Cancel"}], inputvalues: dict = {}):
+    def __init__(self,
+        name:str = "Title of the window",
+        text: str = "Hello, world!",
+        width : int = 40, 
+        fields: list = None,
+        tabindex: int = 0,
+        buttons: list = [{"text":"OK", "type": "button"}, {"text":"Cancel", "type": "button"}],
+        inputvalues: dict = {}
+    ):
         # ╭╮╰╯├┤─│ 40
         clear()
         self.destroyed = False
