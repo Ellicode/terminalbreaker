@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tbpy
-Version: 1.1
+Version: 1.2
 Summary: Welcome to terminalbreaker
 Home-page: https://github.com/Ellicode/terminalbreaker
 Author: Ellicode
@@ -18,7 +18,7 @@ License-File: LICENSE
 
 ![screen recording](screenrecord.gif)
 
-## `pip install terminalbreaker-python`
+## `pip install tbpy`
 
 TerminalBreaker is a python module to create better guis, forms and more.
 

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding = "utf-8") as fh:
 
 setuptools.setup(
     name = "tbpy",
-    version = "1.1",
+    version = "1.2",
     author = "Ellicode",
     author_email = "ellicode22@gmail.com",
     description = "Welcome to terminalbreaker!",

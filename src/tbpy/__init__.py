@@ -63,7 +63,7 @@ class Window():
         self.text_to_print = ""
 
         self.text_to_print += colorama.Fore.BLUE + (("█" * columns) + "\n") * int(self.pady-5) +  colorama.Style.RESET_ALL
-        self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "╭─"  + colorama.Fore.BLACK + Style.BRIGHT + str(name) + Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "─" * ((self.width - 1) - len(str(name))) + "╮"+ colorama.Fore.BLUE + ("█" * (self.padx)) + "█" +  colorama.Style.RESET_ALL +"\n"
+        self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "╭─"  + colorama.Fore.BLACK + Style.BRIGHT + str(name) + Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "─" * ((self.width - 1) - len(str(name))) + "╮"+ colorama.Fore.BLUE + ("█" * (self.padx)) + "██" +  colorama.Style.RESET_ALL +"\n"
         if self.fields:
             a=0
             for i in text.split("\n"):
@@ -102,7 +102,7 @@ class Window():
             self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "│ " + colorama.Fore.BLACK + str(text.split("\n")[-1]) + " " * ((self.width - 1) - len(str(text.split("\n")[-1]))) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "│" + colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) +  colorama.Style.RESET_ALL 
 
         
-        self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "├"+ ("─" * self.width) + "┤" + colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) +  colorama.Style.RESET_ALL  + "\n"
+        self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) + "█" +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "├"+ ("─" * self.width) + "┤" + colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) + "█" +  colorama.Style.RESET_ALL  + "\n"
         self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "│ "
         self.buttonpad = 1
         for i in self.buttons:
@@ -114,9 +114,9 @@ class Window():
                 self.buttonpad+=len(str( "< " + str(i["text"]) + " >" + "     "))
             #  + " " * ((self.width - 1) - len(str(i))) + "│\n"
             # + colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) +  colorama.Style.RESET_ALL  + "\n"
-        self.text_to_print += (width - int(self.buttonpad))*" " +  "│"+ colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) +  colorama.Style.RESET_ALL + "\n"
-        self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "╰" + ("─" * self.width) + "╯" + colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) +  colorama.Style.RESET_ALL  + "\n"
-        self.text_to_print += colorama.Fore.BLUE + ("█" * (self.padx+1)) +  colorama.Style.RESET_ALL + colorama.Fore.BLACK + colorama.Back.BLUE + ("▀" * self.width) + "▀▀" + colorama.Fore.BLUE + ("█" * (self.padx)) +  colorama.Style.RESET_ALL + "\n"
+        self.text_to_print += (width - int(self.buttonpad))*" " +  "│"+ colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) + "█" +  colorama.Style.RESET_ALL + "\n"
+        self.text_to_print += colorama.Fore.BLUE + ("█" * self.padx) +  colorama.Style.RESET_ALL + colorama.Back.LIGHTWHITE_EX + "╰" + ("─" * self.width) + "╯" + colorama.Fore.BLACK + "█" + colorama.Fore.BLUE + ("█" * (self.padx)) + "█" +  colorama.Style.RESET_ALL  + "\n"
+        self.text_to_print += colorama.Fore.BLUE + ("█" * (self.padx+1)) +  colorama.Style.RESET_ALL + colorama.Fore.BLACK + colorama.Back.BLUE + ("▀" * self.width) + "▀▀" + colorama.Fore.BLUE + ("█" * (self.padx)) + "█" +  colorama.Style.RESET_ALL + "\n"
         self.text_to_print += colorama.Fore.BLUE + ("█" * columns) * self.pady +  colorama.Style.RESET_ALL
         if not self.destroyed:
             # for i in range(len(self.text_to_print.split("\n"))):
