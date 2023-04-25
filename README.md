@@ -2,7 +2,7 @@
 
 ![screen recording](screenrecord.gif)
 
-## `pip install terminalbreaker-python`
+## `pip install tbpy`
 
 TerminalBreaker is a python module to create better guis, forms and more.
 
