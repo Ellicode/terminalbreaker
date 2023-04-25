@@ -2,11 +2,11 @@ LICENSE
 README.md
 pyproject.toml
 setup.py
+src/tbpy/__init__.py
+src/tbpy/test.py
 src/tbpy.egg-info/PKG-INFO
 src/tbpy.egg-info/SOURCES.txt
 src/tbpy.egg-info/dependency_links.txt
 src/tbpy.egg-info/requires.txt
 src/tbpy.egg-info/top_level.txt
-src/terminalbreaker/__init__.py
-src/terminalbreaker/test.py
 tests/test.py

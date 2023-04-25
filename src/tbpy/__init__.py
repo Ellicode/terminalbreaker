@@ -5,6 +5,7 @@ import keyboard
 import time
 import sys
 
+
 columns, rows = os.get_terminal_size()
 LINE_UP = '\033[1A'
 LINE_CLEAR = '\x1b[2K'
@@ -18,7 +19,7 @@ init()
 class Button():
     def __init__(self,
         name : str,
-        action : function
+        action = None
     ):
         return {
             "name" : name,
