@@ -1,4 +1,4 @@
-from terminalbreaker import *
+from tbpy import *
 
 clear()
 win = Window(
