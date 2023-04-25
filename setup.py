@@ -1,18 +1,29 @@
-from setuptools import setup, find_packages
+import setuptools
 
+with open("README.md", "r", encoding = "utf-8") as fh:
+    long_description = fh.read()
 
-setup(
-    name='terminalbreaker_py',
-    version='0.2.1',
-    license='MIT',
-    author="Ellicode",
-    author_email='ellicode22@gmail.com',
-    packages=["terminalbreaker"],
-    package_dir={'': 'src'},
-    description="BREAK THE TERMINAL! Create panels, forms, dialogs and buttons into your Python CLI app!",
-    url='https://github.com/Ellicode/terminalbreaker/blob/main/README.md',
-    keywords='example project',
-    install_requires=[
-          'colorama==0.4.6',
+setuptools.setup(
+    name = "tbpy",
+    version = "1.0.0",
+    author = "Ellicode",
+    author_email = "ellicode22@gmail.com",
+    description = "Welcome to terminalbreaker!",
+    long_description = long_description,
+    long_description_content_type = "text/markdown",
+    url = "https://github.com/Ellicode/terminalbreaker",
+    project_urls = {
+        "Bug Tracker": "https://github.com/Ellicode/terminalbreaker/issues",
+    },
+    classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
+    install_requires=[
+        'colorama',
+    ],
+    package_dir = {"": "src"},
+    packages = setuptools.find_packages(where="src"),
+    python_requires = ">=3.6"
 )

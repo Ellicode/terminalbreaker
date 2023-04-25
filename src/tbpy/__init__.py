@@ -15,6 +15,26 @@ def init():
     colorama.init()
     clear()
 init()
+class Button():
+    def __init__(self,
+        name : str,
+        action : function
+    ):
+        return {
+            "name" : name,
+            "action": action,
+            "type" : "button"
+        }
+class Field():
+    def __init__(self,
+        name : str,
+        hide : bool = False
+    ):
+        return {
+            "name" : name,
+            "hide" : hide,
+            "type" : "field"
+        }
 class Window():
     def __init__(self,
         name:str = "Title of the window",

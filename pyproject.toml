@@ -1,15 +1,12 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
 [project]
-name = "terminalbreaker_py"
-version = "0.2.1"
+name = "tbpy"
+version = "1.0.0"
 authors = [
-  { name="Ellicode", email="hello@ellicode.com" },
+  { name="Ellicode", email="ellicode22@gmail.com" },
 ]
-description = "BREAK THE TERMINAL! Create panels, forms, dialogs and buttons into your Python CLI app! "
+description = "Welcome to terminalbreaker"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -17,5 +14,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/Ellicode/terminalbreaker/blob/main/README.md"
+"Homepage" = "https://github.com/Ellicode/terminalbreaker"
 "Bug Tracker" = "https://github.com/Ellicode/terminalbreaker/issues"
