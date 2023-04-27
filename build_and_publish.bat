@@ -1,8 +1,8 @@
 @echo off
 set /P confirm="[35mDo you really want to build and update terminalbreaker's version?[0m [y/n] : "
-IF %confirm% EQU "y" (
+IF %confirm%==y (
     echo [35mSTARTING BUILD...[0m
-    py -m build
+    py -m build 
     echo [35mSTARTING UPLOAD...[0m
     py -m twine upload dist/*      
     echo [35mDONE![0m

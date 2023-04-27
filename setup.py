@@ -5,7 +5,7 @@ with open("README.md", "r", encoding = "utf-8") as fh:
 
 setuptools.setup(
     name = "tbpy",
-    version = "1.2",
+    version = "1.3",
     author = "Ellicode",
     author_email = "ellicode22@gmail.com",
     description = "Welcome to terminalbreaker!",
@@ -19,9 +19,6 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-    ],
-    install_requires=[
-        'colorama',
     ],
     package_dir = {"": "src"},
     packages = setuptools.find_packages(where="src"),
