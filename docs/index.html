@@ -1,28 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <title>Document</title>
+    <style>
+        pre:has(code) > code{
+            padding: 0 !important;
+            border-radius: 2px !important;
+        }
+
+        .navlink{
+            text-align:start; color:black; width:100%
+        }
+        @media (prefers-color-scheme:dark) {
+            .navlink{
+                color: #ADBAC7;
+            }
+        }
+        .navlink[aria-current]{
+            font-weight: 700;
+        }
+    </style>
+    <title>Introduction - TerminalBreraker</title>
 </head>
 <body class="clearfix p-5">
     <div class="col-lg-3 float-left col-md-12 markdown-body p-5 position-md-sticky top-0 left-0">
-        <ul>
-            <li><a class="Link--secondary" href="../index.html">Home</a></li>
+        <ul style="list-style-type: none;">
+            <li><a class="btn btn-invisible navlink" href="../index.html">Home</a></li>
 
-            <li><a class="Link--primary text-bold" aria-current="page" href="index.html">Introduction</a></li>
-            <ul>
-                <li><a class="Link--secondary" href="#installation">Installation</a></li>
-                <li><a class="Link--secondary" href="#basic-usage">Basic usage</a></li>
+            <li><a class="btn btn-outline navlink" aria-selected="true" aria-current="page" href="index.html">Introduction</a></li>
+            <ul style="list-style-type: none;">
+                <li><a class="btn btn-invisible navlink" href="#installation">Installation</a></li>
+                <li><a class="btn btn-invisible navlink" href="#basic-usage">Basic usage</a></li>
             </ul>
-            <li><a class="Link--secondary" href="api.html">API documentation</a></li>
-            <ul>
-                <li><a class="Link--secondary" href="api.html#Window">Window</a></li>
+            <li><a class="btn btn-invisible navlink" href="api.html">API documentation</a></li>
+            <ul style="list-style-type: none;">
+                <li><a class="btn btn-invisible navlink" href="api.html#Window">Window</a></li>
             </ul>
         </ul>
     </div>
@@ -32,9 +49,10 @@
         <p>TerminalBreraker is a python module to create better guis, forms and more in the terminal.</p>
         <h2 id="installation">Installation</h2>
         <p>You can install TerminalBreraker with pip install by running the command below :</p>
-        <pre><code class="language-shell">$ pip install tbpy</code></pre>
-        <p>You can also download the source by clicking the button below :</p>
-        <a class="btn btn-outline" href="../dist/terminalbreaker_py-0.2.1.tar.gz" role="button">terminalbreaker_py-0.2.1.tar.gz</a>
+        <h4>Windows : </h4>
+        <pre><code>py -m pip install tbpy</code></pre>
+        <h4>Unix / Mac : </h4>
+        <pre><code>python -m pip install tbpy</code></pre>
         <h2 id="basic-usage">Basic usage</h2>
         <p>Just call the <a href="api.html#Window" class="branch-name">Window</a> class to your code and you will have a basic window appearing in your terminal!</p>
         <pre><code class="language-python">from terminalbreaker import * # Importing all modules 
@@ -59,5 +77,12 @@ win.mainloop() # Don't forget this!</code></pre>
                 </svg>
             </a>
         </div>
+        <script>
+            if (window.matchMedia("prefers-color-scheme:dark")){
+                document.head.innerHTML += '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">'
+            } else {
+                document.head.innerHTML += '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">'
+            }
+        </script>
     </body>
     </html>

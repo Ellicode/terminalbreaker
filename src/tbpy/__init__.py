@@ -4,6 +4,8 @@ import time
 import subprocess
 import platform
 import sys
+import win32gui,win32process
+
 
 
 
@@ -122,7 +124,7 @@ class Window():
         wg : Color | TwoBitColor = Color.WHITE,
         bg : Color | TwoBitColor = sentinel,
         fg : Color | TwoBitColor = Color.BLACK,
-        sc : Color | TwoBitColor = Color.LIGHTGRAY,
+        sc : Color | TwoBitColor = Color.BLACK,
         bc : Color | TwoBitColor = Color.LIGHTGRAY,
     ) -> None:
         # ╭╮╰╯├┤─│ 40
@@ -145,15 +147,17 @@ class Window():
 
         self.text_to_print += bg + (("█" * columns) + "\n") * int(self.pady-5) +  RESET
         self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "╭─"  + fg + str(name) + RESET + Color.background(wg) + bc + "─" * ((self.width - 1) - len(str(name))) + "╮"+ bg + ("█" * (self.padx)) + "██" +  RESET +"\n"
+        
         if self.fields:
             a=0
             for i in text.split("\n"):
                 if len(str(i)) >= (self.width - 1):
                     raise ValueError("To much text! Text must be less than {} characters (line {})".format(self.width,a))
                 else:
-                    self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│ " + fg + str(i) + " " * ((self.width - 1) - len(str(i))) +  RESET + Color.background(wg) + bc + "│"+ fg + "█" + bg + ("█" * (self.padx)) +  RESET  + "\n"
+                    self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│ " + fg + str(i) + " " * ((self.width - 1) - len(str(i))) +  RESET + Color.background(wg) + bc + "│" + sc + "█" + bg + ("█" * (self.padx)) + "█" +  RESET  + "\n"
                 a+=1
-            self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "├"+ ("─" * self.width) + "┤"+ sc + "█" + bg + ("█" * (self.padx)) +  RESET  + "\n"
+            self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "├"+ ("─" * self.width) + "┤" + sc + "█" + bg + ("█" * (self.padx)) + "█" +  RESET  + "\n"
+
             b = 0
             
 
@@ -168,9 +172,9 @@ class Window():
                 else:
                     value = self.inputvalues[j["name"]][:(self.width - 7) - len(str(j["name"]))] + "..." if len(self.inputvalues[j["name"]]) > (self.width - 7) - len(str(j["name"])) else self.inputvalues[j["name"]]
                 if self.tabindex == self.tabs.index(j):
-                    self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│" + Color.WHITE + Color.background(fg) + " " + str(j["name"]) + " : " + value + "_" + " " * ((self.width - 5) - len(value) - len(str(j["name"]))) +  RESET + Color.background(wg)  + "│"+ fg + "█" + bg + ("█" * (self.padx)) +  RESET  + "\n"
+                    self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│" + Color.WHITE + Color.background(fg) + " " + str(j["name"]) + " : " + value + "_" + " " * ((self.width - 5) - len(value) - len(str(j["name"]))) +  RESET + Color.background(wg)  + bc + "│"+ sc + "█" + bg + ("█" * (self.padx)) + "█" +  RESET  + "\n"
                 else:
-                    self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│ " + fg + str(j["name"]) + " : " + value + " " * ((self.width - 4) - len(value) - len(str(j["name"]))) +  RESET + Color.background(wg) + bc + "│"+ fg + "█" + bg + ("█" * (self.padx)) +  RESET  + "\n"
+                    self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│ " + fg + str(j["name"]) + " : " + value + " " * ((self.width - 4) - len(value) - len(str(j["name"]))) +  RESET + Color.background(wg) + bc + "│"+ sc + "█" + bg + ("█" * (self.padx)) + "█" +  RESET  + "\n"
                 b+=1
         else:
             a=0
@@ -183,12 +187,12 @@ class Window():
             self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│ " + fg + str(text.split("\n")[-1]) + " " * ((self.width - 1) - len(str(text.split("\n")[-1]))) +  RESET + Color.background(wg) + bc + "│" + sc + "█" + bg + ("█" * (self.padx)) +  RESET 
 
         
-        self.text_to_print += bg + ("█" * self.padx) + "█" +  RESET + Color.background(wg) + bc + "├"+ ("─" * self.width) + "┤" + sc + "█" + bg + ("█" * (self.padx)) + "█" +  RESET  + "\n"
+        self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "├"+ ("─" * self.width) + "┤" + sc + "█" + bg + ("█" * (self.padx)) + "█" +  RESET  + "\n"
         self.text_to_print += bg + ("█" * self.padx) +  RESET + Color.background(wg) + bc + "│ "
         self.buttonpad = 1
         for i in self.buttons:
             if self.tabindex == self.tabs.index(i):
-                self.text_to_print += Color.background(ac) + Color.WHITE + "< " + str(i["text"]) + " >" + RESET + Color.background(wg) + "     "
+                self.text_to_print += Color.background(ac) + Color.WHITE + "\033[1m< " + str(i["text"]) + " >" + RESET + Color.background(wg) + "     "
                 self.buttonpad+=len(str( "< " + str(i["text"]) + " >" + "     "))
             else:
                 self.text_to_print += fg + "< "+ str(i["text"]) + " >" + RESET + Color.background(wg) + "     "
@@ -227,7 +231,7 @@ class Window():
                             self.tabindex = 0
                             self.kwargs["tabindex"] = 0
                         self.__init__(**self.kwargs)
-                        time.sleep(0.35)
+                        time.sleep(0.2)
                     elif keyboard.read_key() == "enter": 
                         for i in self.tabs:
                             if i["type"] == "button":
@@ -248,7 +252,7 @@ class Window():
                                     self.inputvalues[self.tabs[self.tabindex]["name"]] += key
                                     self.kwargs["inputvalues"] = self.inputvalues
                                     self.__init__(**self.kwargs)
-                                    time.sleep(0.1)
+                                    time.sleep(0.05)
                 else:
                     break
 
